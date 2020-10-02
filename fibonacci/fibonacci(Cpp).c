@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main()
@@ -10,24 +10,26 @@ int main()
 
     cout << "Fibonacci Series: ";
 
-    for (int i = 1; i <= n; ++i)
+    for (int i = 1; i<=n ; ++i)
     {
         // Prints the first two terms.
         if(i == 1)
         {
-            cout << " " << t1;
-            continue;
+            cout << setw(1)<< t1;
+            
         }
-        if(i == 2)
+        else if(i == 2)
         {
-            cout << t2 << " ";
-            continue;
+            cout << t2 << setw(1);
+  
         }
-        nextTerm = t1 + t2;
-        t1 = t2;
-        t2 = nextTerm;
-        
-        cout << nextTerm << " ";
+        else 
+        {
+            nextTerm = t1 + t2;
+            t1 = t2;
+            t2 = nextTerm;
+        }
+        cout << nextTerm << endl;
     }
     return 0;
 }
